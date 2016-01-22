@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C063FB4E1C5242F400564DDF /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063FB4D1C5242F400564DDF /* MainPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C0A184E81C4CB5BC0016AAB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A184E71C4CB5BC0016AAB7 /* AppDelegate.swift */; };
 		C0A184EA1C4CB5BC0016AAB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A184E91C4CB5BC0016AAB7 /* ViewController.swift */; };
 		C0A184ED1C4CB5BC0016AAB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A184EB1C4CB5BC0016AAB7 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C063FB4D1C5242F400564DDF /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C0A184E41C4CB5BC0016AAB7 /* myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A184E71C4CB5BC0016AAB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A184E91C4CB5BC0016AAB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				C0A184F01C4CB5BC0016AAB7 /* LaunchScreen.storyboard */,
 				C0A184F31C4CB5BC0016AAB7 /* Info.plist */,
 				C0E966AD1C50A677001C710A /* SignUpViewController.swift */,
+				C063FB4D1C5242F400564DDF /* MainPageViewController.swift */,
 			);
 			path = myapp;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C063FB4E1C5242F400564DDF /* MainPageViewController.swift in Sources */,
 				C0E966AE1C50A677001C710A /* SignUpViewController.swift in Sources */,
 				C0A184EA1C4CB5BC0016AAB7 /* ViewController.swift in Sources */,
 				C0A184E81C4CB5BC0016AAB7 /* AppDelegate.swift in Sources */,
