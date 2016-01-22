@@ -85,36 +85,33 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         user.username = userName!
         user.password = password!
         user.email = userName!
-        
-        
-        myUser.setObject(userName!, forKey: "username")
-        myUser.setObject(userPassword!, forKey: "password")
-        myUser.setObject(userName!, forKey: "first_name")
-        myUser.setObject(userFirstname!, forKey: "first_name")
-        myUser.setObject(userLastname!, forKey: "last_name")
-        
-        
+        user.setObject(firstName!, forKey: "first_name")
+        user.setObject(lastName!, forKey: "last_name")
+    
         let photoImageData = UIImageJPEGRepresentation(profilePhotoImageView.image!, 1)
         if (photoImageData != nil){
             //Create a PFFile object to be sent to parse could serve
             let profileImageFile = PFFile(data: photoImageData!)
-            myUser.setObject(profileImageFile!, forKey: "profile_picture")
+            user.setObject(profileImageFile!, forKey: "profile_picture")
         }
-        myUser.saveInBackgroundWithBlock { (success, error) -> Void in
+        user.signUpInBackgroundWithBlock { (success:Bool, error:NSError?) -> Void in
             var userMessage = "Registration is successful. Thank YOU"
             if (!success){
                 userMessage = error!.localizedDescription
             }
             let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) -> Void in
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in
                 if(success){
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
-            })
+            }
             
             myAlert.addAction(okAction)
             self.presentViewController(myAlert, animated: true, completion: nil)
         }
+         
+        
+        
     }
     
 }
